@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import {
-  BrowserRouter as Router, Routes, Route, Link,
+  BrowserRouter as Router,
+  Routes, Route, Link,
 } from 'react-router-dom';
-import { Provider } from 'react-redux'; // Import Provider from react-redux
+import { Provider } from 'react-redux';
 import store from './redux/store';
 import CategoryPage from './components/CategoryPage';
 
@@ -14,9 +15,7 @@ function App() {
         <div>
           <nav className="nav-bar">
             <ul>
-              <li>
-                Bookstore CMS
-              </li>
+              <li>Bookstore CMS</li>
               <li>
                 <Link to="/">Books</Link>
               </li>
