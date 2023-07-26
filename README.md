@@ -58,7 +58,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Demo of Linters**
-- **Demo of book-stores**
+- **Demo of book-store**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LIVE DEMO -->
@@ -84,7 +84,7 @@ To run this project, you need the following:
 Clone this repository to your desired folder:
 
 ```bash
-git clone https://github.com/Eccb7/Math-Magicians.git
+git clone https://github.com/Eccb7/book-store.git
 ```
 
 ### Install
@@ -154,7 +154,7 @@ npm start
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Eccb7/book-stores_ES6/issues).
+Feel free to check the [issues page](https://github.com/Eccb7/book-store/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
