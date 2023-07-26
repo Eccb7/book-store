@@ -12,7 +12,10 @@ function App() {
         <nav className="nav-bar">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              Bookstore CMS
+            </li>
+            <li>
+              <Link to="/">Books</Link>
             </li>
             <li>
               <Link to="/categories">Categories</Link>
