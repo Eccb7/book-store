@@ -15,7 +15,6 @@ const CategoryPage = () => {
 
   return (
     <div>
-      <h2>Category Page</h2>
       <BookList books={books} onDelete={handleDeleteBook} />
       <BookForm onAdd={handleAddBook} />
     </div>
