@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import Home from './components/Home';
 import CategoryPage from './components/CategoryPage';
 
 function App() {
@@ -35,10 +36,6 @@ function App() {
       </Router>
     </Provider>
   );
-}
-
-function Home() {
-  return <h2>Home Page</h2>;
 }
 
 export default App;
