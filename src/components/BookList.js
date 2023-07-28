@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { removeBook } from '../redux/books/booksSlice';
 
 const BookList = ({ books }) => {
   const dispatch = useDispatch();
 
-  if (!Array.isArray(books) || books.length === 0) {
-    return <p>No books available</p>;
+  if (!books || !Array.isArray(books) || books.length === 0) {
+    // Handle loading state or empty list
+    return <p>Loading...</p>;
   }
 
   const handleRemoveBook = (itemId) => {
@@ -17,16 +19,14 @@ const BookList = ({ books }) => {
   return (
     <ul>
       {books.map((book) => (
-        <li key={book.itemId}>
+        <li key={book.itemId || uuidv4()}>
           <h3>{book.title}</h3>
           <p>
             Author:
-            {' '}
             {book.author}
           </p>
           <p>
             Category:
-            {' '}
             {book.category}
           </p>
           <button type="submit" onClick={() => handleRemoveBook(book.itemId)}>Remove Book</button>
@@ -40,9 +40,10 @@ BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
       itemId: PropTypes.string,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
+      title: PropTypes.string,
+      author: PropTypes.string,
+      category: PropTypes.string,
+      isbn: PropTypes.string,
     }),
   ).isRequired,
 };

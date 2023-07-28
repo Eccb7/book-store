@@ -20,20 +20,13 @@ const Home = () => {
   }, [booksFromRedux]);
 
   const handleAddBook = (newBook) => {
-    // Add the new book to localBooks before the async call finishes
-    setLocalBooks([...localBooks, newBook]);
-
     // Dispatch the addBook action to update the Redux store
     dispatch(addBook(newBook));
   };
 
-  const handleRemoveBook = (itemId) => {
-    // Remove the book from localBooks before the async call finishes
-    const updatedLocalBooks = localBooks.filter((book) => book.itemId !== itemId);
-    setLocalBooks(updatedLocalBooks);
-
+  const handleRemoveBook = async (itemId) => {
     // Dispatch the removeBook action to update the Redux store
-    dispatch(removeBook(itemId));
+    await dispatch(removeBook(itemId));
   };
 
   return (

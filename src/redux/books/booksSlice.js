@@ -19,23 +19,19 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   }
 });
 
-export const addBook = createAsyncThunk('books/addBook', async (newBookData, { rejectWithValue }) => {
+export const addBook = createAsyncThunk('books/addBook', async (newBookData) => {
   try {
     const newBook = {
-      itemId: uuidv4(),
+      item_id: uuidv4(),
       ...newBookData,
     };
 
-    const response = await axios.post(baseURL, newBook);
-
-    // Verify if the API returns a success status (e.g., 200) before returning the new book data
-    if (response.status === 200) {
-      return newBook;
-    }
-    throw new Error('Failed to add book');
+    await axios.post(baseURL, newBook);
+    const response = await axios.get(baseURL);
+    return response.data;
   } catch (error) {
-    // console.error('Error posting book:', error.message);
-    return rejectWithValue('Error posting book');
+    console.error('Error posting book:', error);
+    throw error;
   }
 });
 
