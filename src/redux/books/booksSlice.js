@@ -30,8 +30,7 @@ export const addBook = createAsyncThunk('books/addBook', async (newBookData) => 
     const response = await axios.get(baseURL);
     return response.data;
   } catch (error) {
-    console.error('Error posting book:', error);
-    throw error;
+    throw new Error('Error posting book:', error);
   }
 });
 
