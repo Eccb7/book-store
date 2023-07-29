@@ -44,7 +44,9 @@ const BookList = ({ books }) => {
             <p>
               75%
               <br />
-              Completed
+              <span className="Completed Text-Style-2">
+                Completed
+              </span>
             </p>
           </div>
           <div>

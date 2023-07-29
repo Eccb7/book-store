@@ -68,40 +68,44 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={styles.form}>
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        required
-        style={styles.input}
-      />
-      <input
-        type="text"
-        placeholder="Author"
-        value={author}
-        onChange={(e) => setAuthor(e.target.value)}
-        required
-        style={styles.input}
-      />
-      <select
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        required
-        style={styles.select}
-      >
-        <option value="">Select a category</option>
-        <option value="Fiction">Fiction</option>
-        <option value="Non-Fiction">Non-Fiction</option>
-        <option value="Science Fiction">Science Fiction</option>
-        <option value="Mystery">Mystery</option>
-      </select>
+    <>
+      <p className="Title Text-Style-12">Add New Book</p>
+      <form onSubmit={handleSubmit} style={styles.form}>
+        <input
+          type="text"
+          placeholder="Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+          style={styles.input}
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+          required
+          style={styles.input}
+        />
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          required
+          style={styles.select}
+        >
+          <option value="">Select a category</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Mystery">Mystery</option>
+        </select>
 
-      <Button type="submit" variant="contained" style={styles.button}>
-        Add Book
-      </Button>
-    </form>
+        <Button type="submit" variant="contained" style={styles.button}>
+          Add Book
+        </Button>
+      </form>
+
+    </>
   );
 };
 
