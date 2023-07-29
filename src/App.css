@@ -1,4 +1,3 @@
-/* Apply styles to the nav bar */
 .nav-bar {
   background-color: #fbfcfd;
   padding: 1rem;
@@ -7,7 +6,6 @@
   align-items: center;
 }
 
-/* Style the links in the nav bar */
 .nav-bar ul {
   list-style: none;
   display: flex;
@@ -23,18 +21,15 @@
 }
 
 .nav-bar a {
-  color: white;
+  color: rgb(8, 8, 8);
   text-decoration: none;
   font-size: 1.2rem;
-  font-weight: bold;
 }
 
-/* Style the avatar */
 .avatar {
   margin-right: 1rem;
 }
 
-/* Add a line separator below the nav bar */
 hr {
   margin: 0;
   border: 0;
