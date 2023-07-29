@@ -1,38 +1,186 @@
-body {
-  background-color: rgb(176, 202, 202);
-}
-
-h1,
-h2,
-h3,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-.navbar {
-  background-color: #333;
-  color: white;
+/* Apply styles to the nav bar */
+.nav-bar {
+  background-color: #fbfcfd;
+  padding: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
 }
 
-.nav-links {
+/* Style the links in the nav bar */
+.nav-bar ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
 }
 
-.nav-links li {
-  margin-right: 20px;
+.nav-bar ul li {
+  margin-right: 1rem;
 }
 
-.nav-links li a {
+.nav-bar ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-bar a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Style the avatar */
+.avatar {
+  margin-right: 1rem;
+}
+
+/* Add a line separator below the nav bar */
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.bar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 10%;
+  border-radius: 4px;
+  border: solid 1px var(--white-three);
+  background-color: #fdfbfb;
+  width: 80%;
+}
+
+.book-details:hover {
+  border: solid 1px var(--white-three);
+  background-color: #f5f5f5;
+}
+
+.book-details li {
+  list-style: none;
+}
+
+.School-of {
+  width: 7rem;
+  height: 1.125rem;
+  margin-left: 16px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Title {
+  margin-left: 16px;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Suzanne-Collins {
+  width: 5.813rem;
+  height: 1.188rem;
+  margin-left: 16px;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.-Percent-Complete {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  gap: 1rem;
+  --bs-progress-bg: var(--white-three);
+}
+
+.Current-Chapter {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Current-Lesson {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.Rectangle-2 {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin-left: 200px;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
 }
