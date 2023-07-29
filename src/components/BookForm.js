@@ -79,21 +79,21 @@ const BookForm = () => {
           required
           style={styles.input}
         />
-        <input
+        {/* <input
           type="text"
           placeholder="Author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
           required
           style={styles.input}
-        />
+        /> */}
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           required
           style={styles.select}
         >
-          <option value="">Select a category</option>
+          <option value="">Category</option>
           <option value="Fiction">Fiction</option>
           <option value="Non-Fiction">Non-Fiction</option>
           <option value="Science Fiction">Science Fiction</option>
