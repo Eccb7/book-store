@@ -27,7 +27,7 @@ const BookList = ({ books }) => {
             <p className="School-of Text-Style-9">
               {book.category}
             </p>
-            <h3 className="Title Text-Style-5">{book.title}</h3>
+            <h3 className="Title1 Text-Style-5">{book.title}</h3>
             <div className="author-buttons">
               <p className="Suzanne-Collins Text-Style-8">
                 {book.author}
