@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
 import { addBook } from '../redux/books/booksSlice';
 
 const BookForm = () => {
@@ -12,12 +12,6 @@ const BookForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // // Check if the required fields are not empty
-    // if (title.trim() === '' || author.trim() === '' || category.trim() === '') {
-    //   alert('Please fill in all required fields: title, author, and category.');
-    //   return;
-    // }
 
     // Create the new book object with the entered data
     const newBookData = {
@@ -35,19 +29,53 @@ const BookForm = () => {
       setAuthor('');
       setCategory('');
     } catch (error) {
-      // console.error('Error posting book:', error);
       // Handle the error (e.g., display an error message to the user)
     }
   };
 
+  const styles = {
+    form: {
+      display: 'flex',
+      justifyContent: 'space-between', // Add space between the elements
+      alignItems: 'center', // Center elements vertically
+      width: '80%', // Increased width to accommodate the horizontal layout
+      marginLeft: '10%',
+    },
+    input: {
+      flex: '1', // Expand the input to take available space
+      width: '25%', // Set fixed width to 25%
+      padding: '5px',
+      margin: '5px',
+      border: '1px solid #ccc',
+      borderRadius: '4px',
+      fontSize: '16px',
+    },
+    select: {
+      flex: '1', // Expand the select dropdown to take available space
+      width: '25%', // Set fixed width to 25%
+      padding: '5px',
+      margin: '5px',
+      border: '1px solid #ccc',
+      borderRadius: '4px',
+      fontSize: '16px',
+    },
+    button: {
+      flex: '1', // Expand the button to take available space
+      width: '25%', // Set fixed width to 25%
+      padding: '12px',
+      margin: '16px',
+    },
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={styles.form}>
       <input
         type="text"
         placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
+        style={styles.input}
       />
       <input
         type="text"
@@ -55,15 +83,24 @@ const BookForm = () => {
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
         required
+        style={styles.input}
       />
-      <input
-        type="text"
-        placeholder="Category"
+      <select
         value={category}
         onChange={(e) => setCategory(e.target.value)}
         required
-      />
-      <button type="submit">Add Book</button>
+        style={styles.select}
+      >
+        <option value="">Select a category</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Non-Fiction">Non-Fiction</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Mystery">Mystery</option>
+      </select>
+
+      <Button type="submit" variant="contained" style={styles.button}>
+        Add Book
+      </Button>
     </form>
   );
 };
