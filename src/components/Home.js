@@ -31,8 +31,8 @@ const Home = () => {
 
   return (
     <div>
-      <BookForm onAdd={handleAddBook} />
       <BookList books={localBooks} onDelete={handleRemoveBook} />
+      <BookForm onAdd={handleAddBook} />
     </div>
   );
 };
