@@ -36,14 +36,14 @@ const BookForm = () => {
   const styles = {
     form: {
       display: 'flex',
-      justifyContent: 'space-between', // Add space between the elements
-      alignItems: 'center', // Center elements vertically
-      width: '80%', // Increased width to accommodate the horizontal layout
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      width: '80%',
       marginLeft: '10%',
     },
     input: {
-      flex: '1', // Expand the input to take available space
-      width: '25%', // Set fixed width to 25%
+      flex: '1',
+      width: '25%',
       padding: '5px',
       margin: '5px',
       border: '1px solid #ccc',
@@ -51,8 +51,8 @@ const BookForm = () => {
       fontSize: '16px',
     },
     select: {
-      flex: '1', // Expand the select dropdown to take available space
-      width: '25%', // Set fixed width to 25%
+      flex: '1',
+      width: '25%',
       padding: '5px',
       margin: '5px',
       border: '1px solid #ccc',
@@ -60,8 +60,8 @@ const BookForm = () => {
       fontSize: '16px',
     },
     button: {
-      flex: '1', // Expand the button to take available space
-      width: '25%', // Set fixed width to 25%
+      flex: '1',
+      width: '25%',
       padding: '12px',
       margin: '16px',
     },
