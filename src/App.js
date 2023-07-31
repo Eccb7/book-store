@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Routes, Route, Link,
 } from 'react-router-dom';
+import Avatar from '@mui/material/Avatar';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Home from './components/Home';
@@ -15,8 +16,10 @@ function App() {
       <Router>
         <div>
           <nav className="nav-bar">
-            <ul>
-              <li>Bookstore CMS</li>
+            <ul className="bar-list">
+              <li>
+                <h2> Bookstore CMS </h2>
+              </li>
               <li>
                 <Link to="/">Books</Link>
               </li>
@@ -24,6 +27,7 @@ function App() {
                 <Link to="/categories">Categories</Link>
               </li>
             </ul>
+            <Avatar className="avatar" src="/broken-image.jpg" />
           </nav>
 
           <hr />
